@@ -1,0 +1,44 @@
+#cmd {
+  font-family: courier;
+  font-size: 14px;
+  background: black;
+  color: #21f838;
+  overflow: hidden;
+  display: inline-block;
+}
+
+#cmd span {
+  float: left;
+  padding-left: 3px;
+  white-space: pre;
+}
+
+#pre-cursor {
+  overflow: hidden;
+  display: inline-block;
+  height: 18px;
+}
+
+#cursor {
+  float: left;
+  width: 10px;
+  height: 18px;
+  background: #ffffff;
+}
+
+#cursor-inside {
+  float: left;
+  margin: 1px;
+  width: 8px;
+  height: 16px;
+  background: #000000;
+  visibility: hidden;
+}
+
+input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+

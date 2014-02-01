@@ -1,0 +1,31 @@
+#initial-cursor {
+  top: 65px;
+  bottom: 1px;
+  width: 7px;
+  right: 3px;
+  position: absolute;
+  background-color: #9b9d9e;
+  border: medium none;
+  background-clip: padding-box;
+  border-radius: 5px 5px 5px 5px;
+  &:hover {
+    background-color: #828586;
+  }
+  &:active {
+    background-color: #4a90d9;
+  }
+}
+
+#ascrail2000 div {
+  margin-top: 3px;
+  margin-right: 3px;
+}
+
+#navbar nav {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  top: 0px;
+  z-index: 9999;
+  margin-left: 0px;
+}

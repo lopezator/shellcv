@@ -1,0 +1,87 @@
+// Place all the styles related to the index controller here.
+// They will automatically be included in application.css.scss.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "compass/css3/images";
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+#top, #bottom, #left, #right {
+  position: absolute;
+  background: #a6a6a6;
+}
+
+#top {
+  top: 0px;
+  left: 0px;
+  height: 60px;
+  right: 0px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #fcfcfc;
+  @include filter-gradient(#fcfcfc, #ededed, vertical); // IE6-9
+  @include background-image(linear-gradient(top, #fcfcfc 0%,#ededed 100%));
+}
+
+#text {
+  font-family: Cantarell;
+  font-weight: bold;
+  color: #2e3436;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+#title-bar {
+  margin-top: 5px;
+}
+
+#left, #right {
+  top: 0px;
+  bottom: 0px;
+  width: 1px;
+}
+
+#left {
+  left: 0px;
+}
+
+#right {
+  right: 0px;
+  background: #d6d6d6;
+  width: 14px;
+}
+
+#content {
+  overflow: auto;
+  position: absolute;
+  outline: none;
+  top: 62px;
+  bottom: 1px;
+  left: 5px;
+  right: 0px;
+  color: white;
+  height: 92.3%;
+  font-family: monospace;
+  font-size: 15px;
+}
+
+#top {
+  left: 0px;
+  right: 0px;
+}
+
+#bottom {
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 1px;
+  left: 0px;
+  right: 0px;
+  overflow: hidden;
+}
