@@ -1,1 +1,7 @@
-1.- The cursor stops blinking if you keep the mousedown button pressed and shouldn't.
++---------------------------------------------------------+
+| TODO                                                    |
++---------------------------------------------------------+
+
+// Cursor
+1.- If you keep the backspace key pressed deletes characters, but you can't see in the window (effect).
+2.- Blinking should stop while you are writing (i.e. keeping a key pressed).
