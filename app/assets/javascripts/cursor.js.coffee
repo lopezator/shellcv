@@ -1,31 +1,23 @@
+setCursorBlink = ->
+  window.setInterval (->
+    if $("#cursor").css("visibility") is "visible"
+      $("#cursor").css visibility: "hidden"
+    else
+      $("#cursor").css visibility: "visible"
+  ), 300
+
+#document.ready
 $ ->
-  cursor = undefined
-
-  $("#main").click ->
-    $("input").focus()
-    if(cursor == null)
-      cursor = window.setInterval(->
-        if $("#cursor").css("visibility") is "visible"
-          $("#cursor").css visibility: "hidden"
-        else
-          $("#cursor").css visibility: "visible"
-      , 300)
-
-  $("input").keyup ->
+  cursor = setCursorBlink()
+  $("#input").keyup ->
     $("#cmd span").text $(this).val()
 
-  $("#main").mousedown ->
-    isMouseBeingClicked = true;
-
-  $("#main").mouseup ->
-    isMouseBeingClicked = false;
-    clearInterval cursor
-    cursor = null
-
-  $("input").blur ->
+  $("#main").mouseleave ->
     clearInterval cursor
     $("#cursor").css visibility: "visible"
-    $("#cursor-inside").css visibility: "visible"
+    $("#cursor").attr "class", "cursor-outside"
 
-  $("input").focus ->
-    $("#cursor-inside").css visibility: "hidden"
+  $("#main").mouseenter ->
+    clearInterval cursor
+    cursor = setCursorBlink()
+    $("#cursor").attr "class", "cursor-inside"

@@ -19,20 +19,22 @@
   height: 18px;
 }
 
-#cursor {
+.cursor-inside {
   float: left;
   width: 10px;
   height: 18px;
   background: #ffffff;
+  border: 1px solid #000000;
 }
 
-#cursor-inside {
+.cursor-outside {
   float: left;
   margin: 1px;
   width: 8px;
   height: 16px;
   background: #000000;
   visibility: hidden;
+  border: 1px solid #FFFFFF;
 }
 
 input {
