@@ -9,6 +9,11 @@ setCursorBlink = ->
 #document.ready
 $ ->
   cursor = setCursorBlink()
+  $("#input").focus();
+
+  $("#main").click ->
+    $("#input").focus();
+
   $("#input").keyup ->
     $("#cmd span").text $(this).val()
 
