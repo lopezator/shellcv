@@ -8,21 +8,24 @@ setCursorBlink = ->
 
 #document.ready
 $ ->
+  $("#input").focus().val "";
   cursor = setCursorBlink()
-  $("#input").focus();
 
   $("#main").click ->
     $("#input").focus();
 
-  $("#input").keyup ->
-    $("#cmd span").text $(this).val()
+  $("#input").on "input", ->
+    $("#cursor").css visibility: "visible"
+    $("#cmd span").text @value
 
   $("#main").mouseleave ->
     clearInterval cursor
+    $("#input").blur()
     $("#cursor").css visibility: "visible"
     $("#cursor").attr "class", "cursor-outside"
 
   $("#main").mouseenter ->
     clearInterval cursor
+    $("#input").focus()
     cursor = setCursorBlink()
     $("#cursor").attr "class", "cursor-inside"
